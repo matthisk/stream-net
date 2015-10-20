@@ -10,10 +10,10 @@ PM> Install-Package stream-net
 
 ```c#
 // Create a client, find your API keys here https://getstream.io/dashboard/
-var client = new StreamClient('YOUR_API_KEY', 'API_KEY_SECRET');
+var client = new StreamClient("YOUR_API_KEY", "API_KEY_SECRET");
 
 // Reference a feed
-var userFeed1 = client.Feed('user', '1');
+var userFeed1 = client.Feed("user", "1");
 
 // Get 20 activities starting from activity with id last_id (fast id offset pagination)
 var results = userFeed1.GetActivities(0, 20, FeedFilter.Where().IdLessThan(last_id));
